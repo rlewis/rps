@@ -1,0 +1,12 @@
+require 'spec_helper'
+
+describe ThrowController do
+    render_views
+     
+         describe "GET random page (rock, paper, or scissors)" do
+             it "should be successful" do
+               get :home
+               response.should have_selector("title", :content => "Ruby RPS | home")
+             end
+         end
+end
